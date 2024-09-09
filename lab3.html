@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 3</title>
+    <style>
+     div div{
+        padding-bottom: 30px;
+     }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 30vh;">
+        <h1>Laboratorio #3</h1>
+        <div>
+            <label>Numero palindromo</label>
+            <input type="text" id="base" placeholder="text">
+            <button onclick="" id="b">Enviar</button>
+        </div>
+
+        <div>
+            <label>Cantidad de caracteres</label>
+            <input type="text" id="caracter" placeholder="text">
+            <button onclick="" id="c">Enviar</button>
+        </div>
+
+        <div>
+            <label>Año Bisiesto</label>
+            <input type="text" id="bisiesto" placeholder="text">
+            <button onclick="" id="a">Enviar</button>
+        </div>
+
+        <div>
+            <label>Sumatoria de numero primos</label>
+            <input type="number" id="primo" placeholder="Number">
+            <button id="p">Enviar</button>
+        </div>
+    </div>
+
+
+<script>
+    const t1 = document.querySelector("#b");
+    t1.addEventListener('click',(btn)=>{
+        const valor = document.getElementById("base");
+        const palindromo = (t) => {
+          const invertido = t.split('').reverse().join('');
+          let num=parseInt(t), binario='';
+           while(num>0){
+               binario = (num%2)+binario;
+               num = Math.floor(num/2);
+           }
+           
+           let result = t === invertido && binario.split('').reverse().join('') == binario?`${t} es de doble base`:`${t} no es de doble base`;
+           alert(result);
+           return result;
+    };
+    console.log(palindromo(valor.value));
+})  
+
+
+
+
+const t2 = document.querySelector("#c");
+    t2.addEventListener('click',(btn)=>{
+        const valor = document.getElementById("caracter");
+const cantidadCaracteres = (t) => {
+    const letrasDiferente = [], cantidad = {}, cadena = t.split('');
+
+    cadena.map(letra=>{
+       const acceso = letrasDiferente.some(value=>value==letra);
+
+       if(!acceso) letrasDiferente.push(letra);
+      });
+     
+      letrasDiferente.forEach(letra=>{
+        let conteo = 0;
+         cadena.forEach(value=>{
+            if(value === letra){
+              conteo++;
+            }
+         });
+         cantidad[letra]= conteo;
+      })
+       let resp =''
+       for(const [key,value] of Object.entries(cantidad)){
+            resp += `${key} = ${value} \n`;
+       }
+       alert(resp);
+      return resp;
+};
+console.log(cantidadCaracteres(valor.value));
+});
+
+
+
+
+const t3 = document.querySelector("#a");
+    t3.addEventListener('click',(btn)=>{
+     const valor = document.getElementById("bisiesto");
+
+const abisiesto = (a) => {
+    const resp = a%4==0 && (a%100!=0 || a%400==0)?`${a} es un año bisiesto`:`${a} no es un año bisiesto`;
+    alert(resp);
+    return resp;
+};
+console.log(abisiesto(valor.value));
+});
+
+
+
+
+const t4 = document.querySelector("#p");
+    t4.addEventListener('click',(btn)=>{
+     const valor = document.getElementById("primo");
+const sumatoria = (a) =>{
+    const numeroPrimo = [];
+    if(a>0 && a<1000000){
+          for(let i = 1; i<=a; i++){
+                if((i%2==1 && i%3!=0) || i==2 || i==a){ numeroPrimo.push(i);}  
+          } }
+          console.log(numeroPrimo);
+      let suma=0,resp='';
+      numeroPrimo.forEach(p =>{ 
+         suma += p;
+         resp += `${p} `
+       });
+      
+      alert(`Numero primos: ${resp}, Total es ${suma}`);
+      return `Numero primos: ${resp}, Total es ${suma}`;
+};
+console.log(sumatoria(valor.value));
+});
+
+</script>
+</body>
+</html>
