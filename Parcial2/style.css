@@ -1,0 +1,30 @@
+.container{
+  background-color: bisque;
+}
+ 
+ .controls{
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: cornflowerblue;
+    box-shadow: 2px 4px 2px blue;
+}
+
+div .botones #generar{
+    text-align: start;
+}
+
+ .caja{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    margin-top: 20px;
+}
+
+.caja .items{
+    background-color:turquoise;
+    padding: 30px;
+    text-align: center;
+    margin: 20px;
+}
