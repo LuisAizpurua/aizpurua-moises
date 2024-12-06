@@ -1,0 +1,21 @@
+.imgsMain{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.imgsRedSocial {
+    position:absolute; 
+    margin-left: 54% ;
+    object-fit: contain;
+    width: 100%; 
+    height: auto;
+}
+
+.imgsRedSocial img{
+    margin-left: 50px;
+    width: 40px;
+    filter: drop-shadow(
+        2px 3px 4px rgba(0,5,10,0.6)
+    );
+}

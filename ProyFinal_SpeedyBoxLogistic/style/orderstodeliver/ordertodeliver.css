@@ -1,0 +1,45 @@
+@import url('/style/components/global/style-headerp.css');
+@import url('/style/components/global/style-footer.css');
+
+main{
+    padding-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 5.6rem;
+    margin: 0;
+}
+
+.container-list{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.Container-list-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFA500;
+    width: 95%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    border-radius: 20px;
+    gap: 8rem;
+    opacity: 32%;
+}
+
+
+.div-order-1{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    width: 95%;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+

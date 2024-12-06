@@ -1,0 +1,152 @@
+@import url('/style/components/global/style-footer.css');
+@import url('/style/components/global/style-headerp.css');
+
+body{
+    background-color: white;
+    font-family: 'Poppins';
+    min-width: 600px;
+}
+
+main{
+    width: 80%;
+    margin: 4% auto 18%;
+}
+
+.subIndicationFormp{
+    opacity: .5;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+
+.containerForm{
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+
+form{
+  background-color: #FFA50033;
+  height: 140vh;
+  padding: 2%;
+}
+
+.dataBasicDiv{
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    grid-template-rows: repeat(5, 25%);
+}
+
+.dataBasicDiv > div:nth-child(1),div:nth-child(3), div:nth-child(4), div:nth-child(5)   {
+    grid-row: 1;
+}
+.dataBasicDiv > div:nth-child(1){grid-column: 1/3;}
+.dataBasicDiv > div:nth-child(3) {grid-row: 3;}
+.dataBasicDiv > div:nth-child(4) {grid-row: 4;}
+.dataBasicDiv > div:nth-child(5) {grid-row: 5;}
+
+label{
+margin-bottom: 10px;
+margin-right: 15px;
+font-weight: 600;
+}
+
+input, select{
+   width: 300px;
+   height: 38px;
+   border-radius: 14px;
+   border: none;
+   margin-bottom: 30px;
+   margin-top: 10px;
+   padding-left: 8px;
+}
+
+select{
+ background-color: #D9D9D9;   
+ width: 175px;
+}
+
+.datosBasicCargaDiv{
+    margin-top: 8%;
+}
+.titleBasicVehH3, h3{
+  padding-left: 3%;
+}
+
+.datosSeguroVehDiv, .dataBasicDiv, .datosBasicCargaDiv div{
+    padding-left: 7%;
+}
+
+.datosSeguroVehDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    grid-template-rows: repeat(2, auto);
+}
+.datosSeguroVehDiv > div:nth-child(1){grid-column: 1; grid-row: 1;}
+.datosSeguroVehDiv > div:nth-child(4){grid-column: 2; grid-row: 2;}
+
+#continueBtn{
+    width: 15%;
+    height: 36px;
+    border-radius: 15px;
+    background-color: #333333E5;
+    color:#FFA500 ;
+    border: 1px solid #FFA500 ;
+    margin: 10% 40% ;
+    position:relative;
+}
+
+header{
+  margin-top: 100px;
+}
+
+@media (max-width:  1500px){
+    form{
+        height: 165vh;
+      }
+
+   .containerHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40%;
+   }
+   
+   .titlePageDiv{
+     margin-left: 0;
+     margin-bottom: 50px;
+   }
+
+    .navOptions ul{
+     display: flex;
+     flex-direction: column;   
+     text-align: center;
+   }
+   .navOptions ul li{
+    margin-bottom: 30px;
+  }
+
+  .dataBasicDiv{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:  1050px){
+    .datosSeguroVehDiv{
+        display: flex;
+        flex-direction: column;
+    }
+    #continueBtn{
+        width: 22%;
+        height: 36px;
+        border-radius: 15px;
+        margin: 10% 40%;
+        position: relative;
+    }
+    form{
+        height: 185vh;
+      }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="/style/landing/register.css" rel="stylesheet"/>  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Jost" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section class="login">
+            <div class="containerSession">
+                <h1 class="starth1"><b>CREAR UNA CUENTA</b></h1>
+                <div>
+                    <a href="/"><img src="/images/sign-page/red-social/facebook.png" width="30" alt="facebook"
+                            title="facebook" /></a>
+                    <a href="/"><img src="/images/sign-page/red-social/google.png" width="30" alt="google"
+                            title="google" /></a>
+                    <p>
+                        or<br>use your e-mail address
+                    </p>
+                </div>
+                <form id="formEnter" method="post">
+                    <input type="text" id="name" name="name" placeholder="nombre completo" required/>
+                    <input type="email" id="email" name="email" placeholder="e-mail" required/>
+                    <input type="password" id="password" name="password" placeholder="password" required/>
+                    <input type="tel" id="phone" name="phone" placeholder="phone" required />
+                    <select id="rol" name="rol">
+                        <option value="">Elige tu rol...</option>
+                        <option value="user">user</option>
+                        <option value="employee">employee</option>
+                    </select>
+                    <button id="enterFormBtn" name="btn_register" type="submit">ENTRAR</button>
+                </form>
+            </div>
+        </section>
+        <section class="contentWelcome">
+            <label class="title">
+                SPEEDYBOX | LOGISTICS 
+            </label>
+            <p>entrega rapida, siempre a tiempo</p>
+            <img src="/images/landing-icon/logo-speedy.png" alt="logo speedy" title="speedy box" width="70" />
+            <div>
+                <label class="lbl_welcome">¡Bienvenido a SPEEDYBOX!</label>
+                <p class="subTitleWelcomeP">Nos alegra tenerlo con nosotros y estamos<br>
+                  comprometidos a ofrecerle el mejor servicio de<br> entregas rápidas y seguras.</p>
+            </div>
+        </section>
+    </div>
+    <script src="/scripts/landing/register.js" type="module"></script>
+</body>
+</html>

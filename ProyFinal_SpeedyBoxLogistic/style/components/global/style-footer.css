@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+}
+footer  {
+    padding: 20px 0 ;
+    position: sticky;
+    bottom: 0;
+    background-color: #333333;
+    width: auto;
+    text-align: center;
+ }
+
+footer .footerOptions ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px 40px;
+}
+footer .footerOptions ul li{
+        list-style-type:  none;
+        margin: 0 50px;
+        align-items: center;
+}
+footer .footerOptions ul li a{
+    text-decoration: none;
+    color: white;
+}
+.footerOptions ul li a:hover{
+    color:cornflowerblue ;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+.allRightsH3{
+    color: white;
+    padding-top: 10px;
+}

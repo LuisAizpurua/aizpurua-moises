@@ -1,0 +1,89 @@
+@import url('/style/components/global/style-headerp.css');
+@import url('/style/components/global/style-footer.css');
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    min-width: 900px;
+  }
+  main{
+    flex: 1;
+  }
+
+.container-typeshipemts{
+    margin-top: 35px;
+}
+.container-typeshipemts p {
+    width: 80%;
+}
+
+.container-shipment{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25rem;
+    margin-top: 35px;
+}
+
+.container-class-send{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10rem;
+}
+
+.img-send{
+   position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 53vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.btn-continue{
+    padding: 20px 40px;
+    border: 1px solid black;
+    border-radius: 10px; 
+}
+
+.btn-continues:hover{
+    background-color: #347928;
+}
+
+@media (max-width:  1500px){
+    form{
+        height: 165vh;
+      }
+
+   .containerHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40%;
+   }
+   
+   .titlePageDiv{
+     margin-left: 0;
+     margin-bottom: 50px;
+   }
+
+    .navOptions ul{
+     display: flex;
+     flex-direction: column;   
+     text-align: center;
+   }
+   .navOptions ul li{
+    margin-bottom: 30px;
+  }
+  .img-send{
+    height: 68vh;
+  }
+}

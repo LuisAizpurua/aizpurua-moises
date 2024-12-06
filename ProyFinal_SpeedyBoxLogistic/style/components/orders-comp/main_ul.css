@@ -1,0 +1,88 @@
+main ul{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+main ul li{
+    margin: 7vh 0;
+    text-align: center;
+    h3{
+        text-align: center;
+    }
+}
+
+.title_orders{
+    font-weight: 100;
+    font-size: 30px;
+    margin-left: 20vw;
+}
+
+#p_div{
+    background-color: #FFA50052;
+    margin: auto;
+    width: 40vw;
+    padding: 40px 30px;
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 85px;
+}
+
+main ul li #p_div .name_order{
+    background-color: #33333361;
+    width: 30vh;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding-left: 10px;
+
+    @media (max-width: 800px) {
+        width: 20vh;
+    }
+}
+
+.amount{
+    background-color: #33333361;
+    border-radius: 35px;
+    padding: 8px 0;
+    width: 20%;
+    margin: 20px auto;
+}
+
+.btns button{
+   padding: 10px;
+   border-radius: 20px;
+   margin: 0 30px;
+}
+
+.btn_page{
+    margin: 20px 10px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 15px ;
+    background-color: #e2e2e2;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.div_pages{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+button:hover{
+    cursor: pointer;
+    padding: 12px;
+    border: 2px solid green;
+}
+
+button:disabled{
+    cursor:auto;
+    border: none;
+}

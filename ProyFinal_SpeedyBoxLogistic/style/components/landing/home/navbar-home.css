@@ -1,0 +1,27 @@
+.headerOptions ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px 50px;
+}
+
+.headerOptions ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.headerOptions ul li a:hover{
+  color:cornflowerblue ;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+button:hover{
+    border: 3px solid green !important;
+    cursor: pointer;
+}

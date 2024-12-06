@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head-p title="Form Vehicle" linkstyle="/style/form/formstyle.css"></head-p>
+<body>
+    <header-p></header-p>
+    <main>
+        <div class="containerForm">
+            <form id="formEnterRegister">
+                <h2>REGISTRO DE VEHÍCULO</h2>
+                <p class="subIndicationFormp">Ingresa los datos correspondiente.</p>
+                <h3 class="titleBasicVehH3"><ins>Datos Basicos del Vehiculo</ins></h3>
+                <div class="dataBasicDiv">
+                    <div>
+                        <label>1. Tipo De vehículo</label>
+                        <select id="type_veh" name="type_vehicle">
+                            <option>ELIGA UNA OPCION..</option>
+                            <option value="panel">Panel</option>
+                            <option value="frigorifico">Frigorifico</option>
+                            <option value="camion">Camion</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="marca_veh">2. Marca De Vehículo</label><br>
+                        <input id="marca_veh" name="marca" type="text" required/>
+                    </div>
+                    <div>
+                        <label for="modelo_veh">3. Modelo De Vehículo</label><br>
+                        <input id="modelo_veh" name="modelo" type="text" required/>
+                    </div>
+                    <div>
+                        <label for="age_veh">4. Año De Vehículo</label><br>
+                        <input id="age_veh" name="age" type="number" required/>
+                    </div>
+                    <div>
+                        <label for="color_veh">5. Color De Vehículo</label><br>
+                        <input id="color_veh" name="color" type="text" required/>
+                    </div>
+                    <div>
+                        <label for="number_plate">6. Número De placa</label><br>
+                        <input id="number_plate" name="number_plate" type="text" required />
+                    </div>
+                    <div>
+                        <label for="description">7. Description</label><br>
+                        <input id="description" name="description" type="text" required/>
+                    </div>
+                </div>
+                <div class="datosBasicCargaDiv">
+                    <h3><ins>Datos Basicos De La Carga</ins></h3>
+                    <div>
+                        <p><b>Capacidad De Carga</b></p>
+                        <input id="load_capacity" name="load_capacity" type="text" placeholder="peso en kg o lb" required/>
+                    </div>
+                </div>
+
+                <h3><ins>Seguro del Vehiculo</ins></h3>
+                <div class="datosSeguroVehDiv">
+                    <div>
+                        <label for="insured">1.¿Tiene asegurado su vehículo?</label><br>
+                        <select id="insured" name="insured" required>
+                            <option value="SI">SI</option>
+                            <option value="NO">NO</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="name_company">2. Nombre De La Compañía de Seguros</label><br>
+                        <input id="name_company" name="name_company" type="text" placeholder="ASSA, SURA, SEGUROS FEDPA.." required/>
+                    </div>
+                    <div>
+                        <label for="number_policy">3. Número de Póliza</label><br>
+                        <input id="number_policy" name="number_policy" type="text" placeholder="00000000" required/>
+                    </div>
+                    <div>
+                        <label for="date_exp_sure">4. Fecha De Vencimiento Del Seguro</label><br>
+                        <input id="date_exp_sure" name="date_exp_sure" type="date" placeholder="dd/mm/aaaa" required/>
+                    </div>
+                </div>
+                <button id="continueBtn">CONTINUAR</button>
+            </form>
+        </div>
+    </main>
+    <custom-footer></custom-footer>
+    <script src="/scripts/form/form.js" type="module"></script>
+</body>
+</html>

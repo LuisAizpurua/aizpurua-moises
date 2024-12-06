@@ -1,0 +1,93 @@
+@import url('/style/components/global/style-footer.css');
+@import url('/style/components/landing/home/navbar-home.css');
+@import url('/style/components/landing/home/section-content.css');
+@import url('/style/components/landing/home/img-main.css');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #fffaf2;
+    text-align: center;
+    min-width: 955px;
+    padding-top: 10px;
+    overflow-x:hidden;
+}
+
+hr{
+    width: 30%;
+}
+
+li{
+    list-style-type:  none;
+    margin: 0 50px;
+    align-items: center;
+}
+
+.titleCompanyH2{
+    font-family: 'Jost', sans-serif; 
+    font-weight: 100;
+}
+
+.subTitleCompanyDiv{
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#sesion{
+    background-color: #44161b;
+    color:#ffce3f;
+    border: 3px solid #ffce3f;
+    border-radius: 10px;
+    padding: 5px 20px ;
+}
+
+#registered{
+    text-decoration-line: none;
+    color: black;
+}
+
+figure{
+   margin: 100px 0 50px 0;
+}
+
+#registerNowBtn{
+     margin-top: 80px;
+     margin-left: 30%;
+     text-align: center;
+     border-radius: 15px;
+     border: 5px solid #44161b;
+     padding: 7px 45px;
+     font-size: 0.7em;
+     background-color: #44161b;
+     color: #ffce3f;
+ }
+
+iframe{
+    border: none;
+}
+
+@media (max-width: 1544px){ .pageContent{ grid-template-rows: 70vw;} }
+
+@media (max-width: 1440px){ .pageContent{ grid-template-rows: 85vw;} }
+
+@media (max-width: 1375px){
+    .headerOptions ul li{margin: 0 40px;}
+    .imgsRedSocial{margin-left: 60%;}
+}
+
+@media (max-width: 1333px){
+    .headerOptions ul li{ margin: 0 30px;}
+    .pageContent{ display: flex; flex-direction: column;}
+    .pageContent .contentOne div:last-child {margin: 300px 73px 40px; }
+    .pageContent .contentTwo div:first-child{ margin-bottom: 50px;}
+    .contentTwo{ margin-bottom: 140px; }
+ }
+
+ @media (max-width: 1093px){
+    .headerOptions ul li{ margin: 0 20px;}
+    .imgsRedSocial a img{margin-left: 25px; position-try-order:unset}
+ }
