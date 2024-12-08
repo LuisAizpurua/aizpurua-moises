@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Problemas de Lógica Matemática</title>
+</head>
+<body>
+    <h1>Laboratorio 3</h1>
+    <h2>Desarrollo De Software V</h2>
+
+
+    <div class="container">
+        <h2>1. Palíndromo en Doble Base</h2>
+        <label for="numBase">Ingrese un número:</label>
+        <input class="entrada" type="number" id="numBase" min="0">
+        <button class="button-50" onclick="comprobarPalindromo()">Comprobar Palíndromo</button>
+        <p id="resultadoPalindromo"></p>
+    </div>
+
+    <div class="container">
+        <h2>2. Conteo de Caracteres</h2>
+        <label for="cadena">Ingrese una cadena:</label>
+        <input class="entrada" type="text" id="cadena">
+        <button class="button-50" onclick="contarCaracteres()">Contar Caracteres</button>
+        <p id="resultadoCaracteres"></p>
+    </div>
+
+    <div class="container">
+        <h2>3. Año Bisiesto</h2>
+        <label for="ano">Ingrese un año:</label>
+        <input type="number" id="ano" min="0">
+        <button class="button-50" onclick="comprobarAñoBisiesto()">Comprobar Año Bisiesto</button>
+        <p id="resultadoAño"></p>
+    </div>
+
+    <div class="container">
+        <h2>4. Sumatoria de Números Primos</h2>
+        <label for="numPrimos">Ingrese un número:</label>
+        <input type="number" id="numPrimos" min="1">
+        <button class="button-50" onclick="sumatoriaPrimos()">Calcular Sumatoria</button>
+        <p id="resultadoPrimos"></p>
+    </div>
+
+    <script>
+ 
+        function esPalindromo(cadena) {
+            return cadena === cadena.split('').reverse().join('');
+        }
+
+        function comprobarPalindromo() {
+            const numero = parseInt(document.getElementById('numBase').value, 10);
+            const resultado = document.getElementById('resultadoPalindromo');
+            if (isNaN(numero) || numero < 0) {
+                resultado.textContent = "Por favor, ingrese un número entero positivo.";
+                return;
+            }
+            const decimal = numero.toString();
+            const binario = numero.toString(2);
+            resultado.textContent = `${numero} ${esPalindromo(decimal) && esPalindromo(binario) ? 'es' : 'no es'} un palíndromo en base 10 y base 2.`;
+        }
+
+       
+        function contarCaracteres() {
+            const cadena = document.getElementById('cadena').value;
+            const resultado = document.getElementById('resultadoCaracteres');
+            const conteo = {};
+            for (const char of cadena) {
+                conteo[char] = (conteo[char] || 0) + 1;
+            }
+            resultado.textContent = Object.entries(conteo)
+                .map(([char, count]) => `${count} ${char}`)
+                .join(', ');
+        }
+
+     
+        function comprobarAñoBisiesto() {
+            const año = parseInt(document.getElementById('ano').value, 10);
+            const resultado = document.getElementById('resultadoAño');
+            if (isNaN(año) || año < 0) {
+                resultado.textContent = "Por favor, ingrese un año positivo.";
+                return;
+            }
+            const esBisiesto = (año % 4 === 0 && año % 100 !== 0) || (año % 400 === 0);
+            resultado.textContent = `${año} ${esBisiesto ? 'es' : 'no es'} un año bisiesto.`;
+        }
+
+        
+        function esPrimo(num) {
+            if (num <= 1) return false;
+            if (num <= 3) return true;
+            if (num % 2 === 0 || num % 3 === 0) return false;
+            for (let i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) return false;
+            }
+            return true;
+        }
+
+        function sumatoriaPrimos() {
+            const n = parseInt(document.getElementById('numPrimos').value, 10);
+            const resultado = document.getElementById('resultadoPrimos');
+            if (isNaN(n) || n <= 0) {
+                resultado.textContent = "Por favor, ingrese un número mayor que 0.";
+                return;
+            }
+            let suma = 0;
+            for (let i = 2; i < n; i++) {
+                if (esPrimo(i)) suma += i;
+            }
+            resultado.textContent = `La sumatoria de los números primos menores que ${n} es ${suma}.`;
+        }
+    </script>
+</body>
+</html>

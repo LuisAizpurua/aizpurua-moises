@@ -1,0 +1,42 @@
+.container{
+  background-color: bisque;
+}
+ 
+ .controls{
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: cornflowerblue;
+    box-shadow: 2px 4px 2px blue;
+}
+
+div .botones #generar{
+    text-align: start;
+}
+
+ .caja{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    margin-top: 20px;
+}
+
+.caja .items{
+    background-color:turquoise;
+    padding: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+
+INSERT INTO medicos (codigo, cedula, nombre, apellido, direccion, telefono, especialidad, pacientes_mes, pacientes_anual, foto) VALUES ('M001F', '1-234-5678', 'José', 'Martínez', 'Hospital Nacional', '6783344', 'Cardiología', 15, 180,'');
+INSERT INTO medicos (codigo, cedula, nombre, apellido, direccion, telefono, especialidad, pacientes_mes, pacientes_anual, foto) VALUES ('M002G', '2-345-6789', 'Ana', 'López', 'Consultorio Médico Principal', '6939355', 'Pediatría', 20, 240,'');
+INSERT INTO medicos (codigo, cedula, nombre, apellido, direccion, telefono, especialidad, pacientes_mes, pacientes_anual, foto) VALUES ('M003K', '9-876-5432', 'Carlos', 'Hernández', 'Centro de Salud San Miguel', '6829233', 'Oftalmología', 18, 200,'');
+INSERT INTO medicos (codigo, cedula, nombre, apellido, direccion, telefono, especialidad, pacientes_mes, pacientes_anual, foto) VALUES ('M004D', '3-456-7890', 'Laura', 'Díaz', 'Hospital Infantil', '6009345', 'Pediatría', 22, 260,'');
+INSERT INTO medicos (codigo, cedula, nombre, apellido, direccion, telefono, especialidad, pacientes_mes, pacientes_anual, foto) VALUES ('M005T', '7-654-3210', 'Pedro', 'Ramírez', 'Centro Médico Sur', '6550193', 'Ginecología', 17, 190,'');
+INSERT INTO medicos (codigo, cedula, nombre, apellido, direccion, telefono, especialidad, pacientes_mes, pacientes_anual, foto) VALUES ('M006B', '4-567-8901', 'Ana María', 'Chávez', 'Consultorio Médico Norte', '6783443', 'Dermatología', 16, 195,'');
+INSERT INTO medicos (codigo, cedula, nombre, apellido, direccion, telefono, especialidad, pacientes_mes, pacientes_anual, foto) VALUES ('M007J', '5-678-9012', 'Javier', 'Castro', 'Hospital del Este', '6894093', 'Neurología', 19, 210,'');
+INSERT INTO medicos (codigo, cedula, nombre, apellido, direccion, telefono, especialidad, pacientes_mes, pacientes_anual, foto) VALUES ('M008K', '6-789-0123', 'Luisa', 'Morales', 'Clínica San Judas', '6738443', 'Endocrinología', 21, 245,'');
+INSERT INTO medicos (codigo, cedula, nombre, apellido, direccion, telefono, especialidad, pacientes_mes, pacientes_anual, foto) VALUES ('M009I', '0-987-6543', 'Fernando', 'Fernández', 'Hospital Metropolitano', '6223743', 'Ortopedia', 20, 230,'');
+INSERT INTO medicos (codigo, cedula, nombre, apellido, direccion, telefono, especialidad, pacientes_mes, pacientes_anual, foto) VALUES ('M010U', '8-789-1234', 'Marta', 'López', 'Centro Médico Plaza', '6989234', 'Psiquiatría', 18, 205,'');

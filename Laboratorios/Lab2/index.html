@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorio #2</title>
+</head>
+<body>
+    <p>
+        ¿Ques JavaScript?
+        JavaScript es un lenguaje de programación o de secuencias de comandos que
+        te permite implementar funciones complejas en páginas web, cada vez que
+        una página web hace algo más que sentarse allí y mostrar información
+        estática para que la veas, muestra oportunas ac tualizaciones de
+        contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento
+        de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente
+        JavaScript está involucrado. Es la tercera capa del pastel de las
+        tecnologías web estándar, dos de las cuales (HTML y CSS) hemos cubierto
+        con mucho más detalle en otras partes del Área de aprendizaje.
+        ¿A que se asemeja a Java?
+        A pesar de sus diferencias, JavaScript y Java comparten algunas similitudes:
+        Ambos lenguajes utilizan una sintaxis similar a C.
+        Ambos son lenguajes de programación orientados a objetos.
+        Ambos lenguajes tienen una amplia comunidad de desarrolladores y una gran cantidad de recursos disponibles.
+    </p>
+</body>
+<script >//Parte #2
+    //Declarar dos variables con la palabra reservada "var", imprimir 
+    //el resultado de las operaciones de "Suma", "Resta", "Multiplicación" y "División" 
+    //en la consola. Las variables pueden ser estáticas. (10pts)
+    
+    let num1 = 20;
+    let num2 = 10;
+    
+    console.log(num1 + num2);
+    console.log(num1 - num2);
+    console.log(num1 * num2);
+    console.log(num1 / num2);
+    
+    //Parte #2
+    //Declarar dos variables con la palabra reservada "let", imprimir la concatenación de ellas. (10pts)
+    let nombre = 'Moises';
+    let apellido = 'Aizpurua';
+    
+    console.log("Mi nombre es "+nombre +" "+apellido);
+    
+    //Parte  #3
+    //Declarar dos variables con la palabra reservada "const", imprimir cuál es el tipo de dato de esa variable. (10pts)
+    const nombre2 = 'Luis';
+    const num3 = 23;
+    
+    console.log(typeof(nombre2));
+    console.log(typeof(num3));
+    
+    //Parte #4
+    //Declarar una variable tipo Objeto, colocar 4 llaves dentro de él que contengan un number,
+    // un string, un booleano y un objeto vacío, en ese mismo orden. (10pts)
+    
+    const objeto1 = {
+        edad : 21,
+        Nombre : 'Moises',
+        Activo  :true,
+        ObjetoVacio: {}
+    };
+    
+    //Parte #5
+    //Escribir una función en JS que tome un número entero positivo como 
+    //argumento y devuelva la suma de todos los números menores que sean
+    // múltiplos de 3 o 5. Por ejemplo: Si el número dado es 10, la función 
+    //debería devolver la suma de 3, 5, 6 y 9, que es 23. (50 pts)
+    
+    function sumaImpar(num){
+        let suma = 0;
+        for(i = 1;i < num; i++ ){
+            if(i % 3 == 0 || i % 5 == 0){
+                suma +=i ;
+            }
+        }
+        return suma;
+    }
+    
+    const fun = sumaImpar(10);
+    console.log(fun);
+    </script>
+</html>

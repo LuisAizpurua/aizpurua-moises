@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Laboratorio 4</title>
+        <style>
+            .container {
+                margin: 50px;
+                font-size: 18px;
+            }
+            span {
+                font-weight: bold;
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <label for="input">Escribe algo: </label>
+        <input type="text" id="input" placeholder="Escribe aquí...">
+        <p><span id="output"></span></p>
+    </div>
+    <script>
+        const inputField = document.getElementById('input');
+        const outputText = document.getElementById('output');
+        inputField.addEventListener('input', () =>{
+            const inputValue = inputField.value;
+
+            const reversedText = inputValue.split('').reverse().join('');
+
+            outputText.textContent = reversedText;
+        });
+    </script>
+    </body>
+    </html>
